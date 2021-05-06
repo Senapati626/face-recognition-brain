@@ -18,7 +18,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3001/signin', {
+    fetch('https://shielded-reef-26913.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -50,6 +50,7 @@ class Signin extends React.Component {
                   type="email"
                   name="email-address"
                   id="email-address"
+                  autoComplete="false"
                   onChange={this.onEmailChange}
                 />
               </div>
@@ -60,6 +61,7 @@ class Signin extends React.Component {
                   type="password"
                   name="password"
                   id="password"
+                  autoComplete="false"
                   onChange={this.onPasswordChange}
                 />
               </div>
